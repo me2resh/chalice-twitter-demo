@@ -15,6 +15,10 @@ virtualenv /tmp/chalice-twitter-demo
 pip install -r requirements.txt
 ```
 
+### Configuration
+- Create twitter application with read/write permissions
+- Add your twitter app keys and secrets to [https://github.com/me2resh/chalice-twitter-demo/blob/main/chalicelib/__init__.py](https://github.com/me2resh/chalice-twitter-demo/blob/main/chalicelib/__init__.py)
+
 ### Deploy to AWS
 ```bash
 chalice deploy
