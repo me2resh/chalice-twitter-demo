@@ -11,12 +11,14 @@ def update_profile_image(image: str):
     twitter.update_profile_image(image=jpeg_img)
 
 
-@app.schedule('cron(0 05 ? * * *)')
-def change_to_awake(event):
+@app.route('/awake')
+def change_to_awake():
     update_profile_image('awake.jpeg')
+    return 'Awake!'
 
 
-@app.schedule('cron(0 22 ? * * *)')
-def change_to_asleep(event):
+@app.route('/asleep')
+def change_to_asleep():
     update_profile_image('asleep.jpeg')
+    return 'Asleep!'
 
